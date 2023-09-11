@@ -1,0 +1,14 @@
+{
+    "lang": "eng+chi_sim",
+    "prefix_verb": [
+        "看",
+        "读"
+    ],
+    "prefix_noun": [
+        "图",
+        "这个"
+    ],
+    "always_read_image": false,
+    "model": "blip2",
+    "free_cuda_memory": true
+}
