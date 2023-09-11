@@ -93,7 +93,7 @@ class readim(Plugin):
         if e_context["context"].type == ContextType.IMAGE and self.state:
             e_context["context"].type = ContextType.TEXT
             msg: ChatMessage = e_context["context"]["msg"]
-            if not self.mdoel.ready:
+            if not self.model.ready:
                 logger.info(f"视觉模型未就绪")
                 e_context["context"].content = f"你的回答需要包括：你的读图功能还没有准备好, 需要等等你"
             else:
