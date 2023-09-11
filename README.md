@@ -13,7 +13,7 @@ sudo apt-get install tesseract-ocr
 pip install pytesseract Pillow
 ```
 
-根据需求安装语言，具体参照[tesseract-ocr/tesseract)](https://github.com/tesseract-ocr/tesseract)
+根据需求安装语言，具体参照[tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract)
 
 ```
 sudo apt-get install tesseract-ocr-chi-sim  # 简体中文
