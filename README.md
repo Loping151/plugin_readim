@@ -63,6 +63,8 @@ pip install accelerate
 
 <img src="https://user-images.githubusercontent.com/97866915/266765960-6287a8bb-e74e-416c-adff-4f29987e34dd.jpg" alt="图像4" width="30%">
 
+<img src="https://user-images.githubusercontent.com/97866915/266992345-ca61ef4b-66be-4f65-87f1-4a19a653ffbd.jpg" alt="图像5" width="30%">
+
 ## 协助开发
 
 已经再model.py中写好了接口，只需使用你的方法重写类的`caption_image`
