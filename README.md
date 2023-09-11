@@ -30,6 +30,7 @@ pip install accelerate
 本地使用blip2需要10G左右的显存或内存，cpu运行耗时尚可接受，但推荐使用gpu可以实现实时回复。
 
 如果和sdwebui同时使用，插件提供了每次用完模型将模型转移到内存中的功能，即看图时才占用显存，不与绘画占显存冲突。但正在绘图时启用看图会抢显存报错。我给出一个解决方法：写一个bash脚本单独用于启动webui，然后再相关地方捕捉显存错误，用subprocess杀死卡住的webui并且重启，如图：
+
 ![1](.figures/1.png)
 
 ## 使用说明
@@ -54,11 +55,13 @@ pip install accelerate
 
 ### 效果展示
 
-![IMG_20230909_145816](https://user-images.githubusercontent.com/97866915/266765948-be6f8874-e078-4eb3-82e6-f52ea2cedc51.jpg)
+<img src="https://user-images.githubusercontent.com/97866915/266765948-be6f8874-e078-4eb3-82e6-f52ea2cedc51.jpg" alt="图像1" width="30%">
 
-![IMG_20230909_145826](https://user-images.githubusercontent.com/97866915/266765952-ea11416c-9e21-498f-9421-69508e51bc79.jpg)
+<img src="https://user-images.githubusercontent.com/97866915/266765952-ea11416c-9e21-498f-9421-69508e51bc79.jpg" alt="图像2" width="30%">
 
-![IMG_20230909_145914](https://user-images.githubusercontent.com/97866915/266765957-2ebebe3c-984b-4412-a9d2-473d9bf62794.jpg)![IMG_20230909_150115](https://user-images.githubusercontent.com/97866915/266765960-6287a8bb-e74e-416c-adff-4f29987e34dd.jpg)
+<img src="https://user-images.githubusercontent.com/97866915/266765957-2ebebe3c-984b-4412-a9d2-473d9bf62794.jpg" alt="图像3" width="30%">
+
+<img src="https://user-images.githubusercontent.com/97866915/266765960-6287a8bb-e74e-416c-adff-4f29987e34dd.jpg" alt="图像4" width="30%">
 
 ## 协助开发
 
