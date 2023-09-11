@@ -2,7 +2,7 @@
 
 本插件用于使机器人可以阅读图像中的内容和文字。
 
-本插件基于[chatgpt-on-wechat](https://github.com/Loping151/chatgpt-on-wechat). 但本人偏离主仓库太多，可能存在兼容性错误。
+本插件基于[chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat). 但本人偏离主仓库太多，可能存在兼容性错误。
 
 ## 环境要求
 
