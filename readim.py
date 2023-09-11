@@ -22,9 +22,6 @@ import io
 class readim(Plugin):
     def __init__(self):
         super().__init__()
-        logger.info("[imread] inited")
-    def __init__(self):
-        super().__init__()
         curdir = os.path.dirname(__file__)
         config_path = os.path.join(curdir, "config.json")
         self.state = False # 切换激活状态
