@@ -67,5 +67,5 @@ pip install accelerate
 
 ## 协助开发
 
-已经再model.py中写好了接口，只需使用你的方法重写类的`caption_image`
+已经在model.py中写好了接口，只需使用你的方法重写类的`caption_image`
 
