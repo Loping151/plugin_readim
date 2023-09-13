@@ -9,6 +9,7 @@
         "这个"
     ],
     "always_read_image": false,
+    "default_allow_ocr": true,
     "model": "blip2",
     "free_cuda_memory": true
 }
