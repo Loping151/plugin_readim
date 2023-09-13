@@ -89,7 +89,7 @@ class readim(Plugin):
             return
             
             
-        if (e_context["context"].type == ContextType.IMAGE and self.state.get([session_id+receiver], False)) or self.always_read_image:
+        if (e_context["context"].type == ContextType.IMAGE and self.state.get(session_id+receiver, False)) or self.always_read_image:
             e_context["context"].type = ContextType.TEXT
             msg: ChatMessage = e_context["context"]["msg"]
             if not self.model.ready:
