@@ -89,7 +89,7 @@ class readim(Plugin):
             return
             
             
-        if (e_context["context"].type == ContextType.IMAGE and self.state[session_id+receiver]) or self.always_read_image:
+        if (e_context["context"].type == ContextType.IMAGE and self.state.get([session_id+receiver], False)) or self.always_read_image:
             e_context["context"].type = ContextType.TEXT
             msg: ChatMessage = e_context["context"]["msg"]
             if not self.model.ready:
@@ -108,7 +108,11 @@ class readim(Plugin):
                             image_ocr = ocr_from_image(image, lang=self.lang)
                             e_context["context"].content += "上面写了文字：{}(如果你看不明白上面写了什么, 请你忽略上面写的文字, 不需要告诉我)。".format(image_ocr)
                         e_context["context"].content += "请你假装你自己看到了这张图片的内容, 而不是我告诉你了描述。你的回答中不要透露你是假装看到的，请假装你真的看到了图片内容。"
-                        self.state[session_id+receiver]=False # 只有成功的读完了图片，才结束请求。否则无需重新请求，就可以再接受一张图
+                        
+                        try:
+                            self.state[session_id+receiver]=False # 只有成功的读完了图片，才结束请求。否则无需重新请求，就可以再接受一张图
+                        except Exception as e:
+                            pass #  一般是always_read_image，无需处理
                 except Exception as e:
                     logger.error(f"读取图片数据时出现错误：{e}")
                     e_context["context"].content = f"你没有收到图片或图片处理失败了。"
