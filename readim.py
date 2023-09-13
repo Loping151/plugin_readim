@@ -57,7 +57,7 @@ class readim(Plugin):
         ]:
             return
             
-        content = e_context['context'].contents
+        content = e_context['context'].content
         session_id = e_context['context'].kwargs['session_id']
         receiver = e_context['context'].kwargs['receiver']
         
