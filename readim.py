@@ -125,5 +125,5 @@ class readim(Plugin):
             help_text = f"现在直接发送图片就可以读\n"
         else:    
             help_text = "尝试在句子中组合动词{}和名词{}吧\n".format(self.prefix_verb, self.prefix_noun)
-        help_text+=f"发送 \"开启/关闭 ocr\" 控制是否读取图片的文字信息。只在当前会话中其作用。\n"
+        help_text+=f"发送 \"开启/关闭 ocr\" 控制是否读取图片的文字信息。只在当前会话中起作用。\n"
         return help_text
