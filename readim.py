@@ -104,7 +104,7 @@ class readim(Plugin):
                         image = Image.open(io.BytesIO(image_data))
                         image_caption = self.model.caption_image(image)
                         e_context["context"].content = "我发给了你图片，内容是{}, ".format(image_caption)
-                        if self.allow_ocr.get(session_id, self.default_allow_ocr):
+                        if self.allow_ocr.get(receiver, self.default_allow_ocr):
                             image_ocr = ocr_from_image(image, lang=self.lang)
                             e_context["context"].content += "上面写了文字：{}(如果你看不明白上面写了什么, 请你忽略上面写的文字, 不需要告诉我)。".format(image_ocr)
                         e_context["context"].content += "请你假装你自己看到了这张图片的内容, 而不是我告诉你了描述。你的回答中不要透露你是假装看到的，请假装你真的看到了图片内容。"
