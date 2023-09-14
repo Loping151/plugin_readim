@@ -16,7 +16,7 @@ import io
     desire_priority=0,
     hidden=True,
     desc="A plugin that convert image with blip2(or other model) and ocr",
-    version="0.2",
+    version="0.2.1",
     author="loping151",
 )
 class readim(Plugin):
