@@ -2,6 +2,8 @@ from PIL import Image
 from transformers import AutoProcessor, Blip2ForConditionalGeneration
 import torch
 import threading
+from common.log import logger
+import subprocess
 
 class BaseModel():
     def __init__(self):
@@ -24,8 +26,12 @@ class Blip(BaseModel):
         self.processor = AutoProcessor.from_pretrained("Salesforce/blip2-opt-2.7b")
         self.model = Blip2ForConditionalGeneration.from_pretrained("Salesforce/blip2-opt-2.7b", torch_dtype=torch.float16)
         self.ready = True
+        logger.info("[readim] Blip已就绪")
+        
         
     def caption_image(self, image):
+        # subprocess.run(['tmux', "kill-window", "-t", "webui"]) # 临时关闭webui，搭配webui自启动使用
+        
         if self.free_cuda_memory:
             self.model.to(self.device)
 
