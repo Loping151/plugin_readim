@@ -14,7 +14,7 @@ import io
 @plugins.register(
     name="readim",
     desire_priority=0,
-    hidden=True,
+    hidden=False,
     desc="A plugin that convert image with blip2(or other model) and ocr",
     version="0.2.1",
     author="loping151",
