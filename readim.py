@@ -81,7 +81,7 @@ class readim(Plugin):
                     logger.info(f"视觉模型未就绪")
                     e_context["context"].content += f"。你的回答需要包括：你的读图功能还没有准备好, 需要等等你" # 这些都是发给bot的提示词，可以自己改。我觉得现在的不错，先不写在config
                 else:
-                    e_context["context"].content += f"。现在, 你可以读取普片了, 请你向我索要图片"
+                    e_context["context"].content += f"。现在, 你可以读取图片了, 请你向我索要图片"
             if '开启' in content and 'ocr' in content: # 暂时没有接入plugin的标准命令
                 self.allow_ocr[session_id] = True
                 logger.info(f"ocr开启了")
