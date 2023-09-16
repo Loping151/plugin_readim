@@ -65,7 +65,6 @@ class readim(Plugin):
             user = e_context['context'].kwargs['msg'].actual_user_nickname
         else: 
             user = e_context['context'].kwargs['msg'].from_user_nickname
-        logger.info(f"user: {user} request readim, allowed")
         
         if e_context["context"].type == ContextType.TEXT and not self.always_read_image:
             is_verb, is_noun = False, False
