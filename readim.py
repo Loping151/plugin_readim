@@ -16,7 +16,7 @@ import io
     desire_priority=0,
     hidden=False,
     desc="A plugin that convert image with blip2(or other model) and ocr",
-    version="0.2.1",
+    version="0.2",
     author="loping151",
 )
 class readim(Plugin):
@@ -59,8 +59,13 @@ class readim(Plugin):
             
         content = e_context['context'].content
         session_id = e_context['context'].kwargs['session_id']
+        is_group = e_context['context'].kwargs['msg'].is_group # certain group
         receiver = e_context['context'].kwargs['receiver']
-        user = e_context['context'].kwargs['msg'].to_user_nickname
+        if is_group:
+            user = e_context['context'].kwargs['msg'].actual_user_nickname
+        else: 
+            user = e_context['context'].kwargs['msg'].from_user_nickname
+        logger.info(f"user: {user} request readim, allowed")
         
         if e_context["context"].type == ContextType.TEXT and not self.always_read_image:
             is_verb, is_noun = False, False
@@ -74,7 +79,7 @@ class readim(Plugin):
                 self.state[session_id+receiver+user] = True
                 if not self.model.ready:
                     logger.info(f"视觉模型未就绪")
-                    e_context["context"].content += f"你的回答需要包括：你的读图功能还没有准备好, 需要等等你" # 这些都是发给bot的提示词，可以自己改。我觉得现在的不错，先不写在config
+                    e_context["context"].content += f"。你的回答需要包括：你的读图功能还没有准备好, 需要等等你" # 这些都是发给bot的提示词，可以自己改。我觉得现在的不错，先不写在config
                 else:
                     e_context["context"].content += f"。现在, 你可以读取普片了, 请你向我索要图片"
             if '开启' in content and 'ocr' in content: # 暂时没有接入plugin的标准命令
