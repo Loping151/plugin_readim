@@ -69,7 +69,7 @@ pip install accelerate
 
 <img src="https://user-images.githubusercontent.com/97866915/266765952-ea11416c-9e21-498f-9421-69508e51bc79.jpg" alt="图像2" width="30%">
 
-<img src="https://user-images.githubusercontent.com/97866915/266765957-2ebebe3c-984b-4412-a9d2-473d9bf62794.jpg" alt="图像3" width="30%">
+<img src="https://user-images.githubusercontent.com/97866915/266765957-2ebebe3c-984b-4412-a9d2-473d9bf62794.jpg" alt="图像3（仅供效果测试，不代表任何政治讽刺和倾向！请注意！）" width="30%">
 
 <img src="https://user-images.githubusercontent.com/97866915/266765960-6287a8bb-e74e-416c-adff-4f29987e34dd.jpg" alt="图像4" width="30%">
 
